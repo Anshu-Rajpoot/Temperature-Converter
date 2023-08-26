@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Temperature Converter</title>
+
+    <style>
+        body {
+            background-color: #99999f4d;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        div{
+          width: 70%;
+          margin: auto;
+          padding: 20px;
+          border: solid rgb(114, 114, 114) 3px;
+          text-align: center;
+          box-shadow: inset -1px -1px rgb(211, 216, 239),inset 1px 1px rgba(255, 255, 255, 0.9);
+        }
+        h3,h2{
+          font-family:Arial;
+        }
+        h1{
+          color:#232222;
+          font-family:'Times New Roman';
+
+        }
+    </style>
+
+    <script>
+        function convertToF() {
+            const c = parseFloat(document.getElementById("Celsius").value);
+            const f = (c * 9 / 5) + 32;
+            document.getElementById("fahr").textContent = `Fahrenheit: ${f.toFixed(2)}`;
+        }
+        
+        function convertToC() {
+            const f = parseFloat(document.getElementById("Fahrenheit").value);
+            const c = (f - 32) * 5 / 9;
+            document.getElementById("cels").textContent = `Celsius: ${c.toFixed(2)}`;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <br>
+        <label for="Celsius">Celsius:</label>
+        <input type="Number" id="Celsius">
+        <button onclick="convertToF()">Convert To Fahrenheit</button>
+        <p id="cels"></p>
+        <br><br>
+        <label for="Fahrenheit">Fahrenheit:</label>
+        <input type="Number" id="Fahrenheit">
+        <button onclick="convertToC()">Convert To Celsius</button>
+        <p id="fahr"></p>
+    </div>
+
+    <br><br>
+
+    <h2><i>Origin of <b>Temperature Scale</b></i></h2>
+    <br>
+    <h3>What is Celsius???</h3>
+      <p>Celsius is the most widely used temperature scale in the world today. It was developed by Swedish astronomer and physicist Anders Celsius in the 18th century.
+        Celsius proposed a temperature scale with 0 degrees as the freezing point of water and 100 degrees as the boiling point of water. Its simplicity with reference points based on the properties of water made it widely adopted and essential for scientific and everyday temperature measurements.
+        The Celsius scale is also known as the centigrade scale</p>
+
+    <h3>What is Fahrenheit???</h3>
+    <p>The Fahrenheit temperature scale was developed by Polish-German physicist and engineer Daniel Gabriel Fahrenheit. In 1724 Fahrenheit created the mercury-in-glass thermometer which had a standardized temperature scale and greater accuracy than existing thermometers.
+      Fahrenheit used a specific mixture of ice and salt to define zero degrees on the Fahrenheit scale. He used the average human body temperature to define 100 degrees on the scale.</p>
+</body>
+
+<footer text-align:bottom >
+  <b>&copy;<i>Copyright Reserved</i> by Anshu Rajpoot</b>
+</footer>
+</html>
